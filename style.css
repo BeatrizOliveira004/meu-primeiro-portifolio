@@ -1,0 +1,253 @@
+/* 1. Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fc;
+    color: #24304a;
+    line-height: 1.7;
+}
+
+/* 2. Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #4338ca;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #334155;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #6d5dfc;
+}
+
+/* 3. Apresentação inicial */
+.apresentacao {
+    max-width: 900px;
+    margin: 55px auto;
+    padding: 30px 24px;
+    text-align: center;
+}
+
+.destaque {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: #e9e7ff;
+    color: #4338ca;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-bottom: 18px;
+    color: #172554;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+}
+
+.apresentacao > p:not(.destaque) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    font-size: 18px;
+    color: #475569;
+}
+
+/* 4. Botões e links */
+.botao {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #6254e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #4338ca;
+}
+
+/* 5. Foto de perfil */
+.foto-perfil {
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 25px auto 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #e4e0ff;
+}
+
+/* 6. Seções */
+.secao {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+h2 {
+    margin-bottom: 18px;
+    color: #172554;
+    font-size: 28px;
+}
+
+h3 {
+    margin: 22px 0 10px;
+    color: #334155;
+    font-size: 20px;
+}
+
+.secao p {
+    margin-bottom: 15px;
+}
+
+.lista {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.lista li {
+    margin-bottom: 8px;
+}
+
+.secao a:not(.botao) {
+    color: #5145cd;
+    text-decoration: none;
+}
+
+.secao a:hover {
+    text-decoration: underline;
+}
+
+/* 7. Cartões de projetos */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px #17255412;
+}
+
+.cartao h3 {
+    margin-top: 0;
+}
+
+.cartao p {
+    font-size: 15px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: auto;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.andamento {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
+.futuro {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.link-externo {
+    font-weight: bold;
+}
+
+/* 8. Rodapé */
+.rodape {
+    margin-top: 50px;
+    padding: 25px 15px;
+    text-align: center;
+    background-color: #172554;
+    color: #ffffff;
+}
+
+.rodape p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* 9. Adaptação para telas menores */
+@media (max-width: 750px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        margin: 20px 14px;
+        padding: 22px;
+    }
+
+    .apresentacao {
+        margin: 25px auto;
+    }
+}
